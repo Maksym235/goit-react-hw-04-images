@@ -16,7 +16,7 @@ export function ImageGalleryItem({ img: { largeImageURL, id, webformatURL } }) {
     <ImageGalleryItemSt onClick={toggleModal} key={id}>
       <ImageGalleryItemImage src={webformatURL} alt="id" />
       {modalOpen && (
-        <Modal onClose={toggleModal}>
+        <Modal onClose={toggleModal} show={modalOpen}>
           <img src={largeImageURL} alt={id} width="800" height="600" />
         </Modal>
       )}
